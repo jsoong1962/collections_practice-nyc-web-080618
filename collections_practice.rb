@@ -31,13 +31,9 @@ end
 
 def kesha_maker(array)
   arr = []
-  i = 0
-  while i < array.length
-  arr_char = array[i].split("")
-  arr_char[2] = "$"
-  new_word = arr_char.join("")
-  arr << new_word
-  i += 1
+  array.each do |word|
+    word[2] = "$"
+    arr << word 
   end
   arr
 end
